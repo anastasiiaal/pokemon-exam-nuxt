@@ -17,7 +17,7 @@
                 <p class="mb-1 font-normal text-gray-700 dark:text-gray-400"><span class="font-bold">Defense: </span>{{ data.stats.defense }}</p>
                 <p class="mb-1 font-normal text-gray-700 dark:text-gray-400"><span class="font-bold">Special defense: </span>{{ data.stats.special_defense }}</p>
                 <p class="mb-1 font-normal text-gray-700 dark:text-gray-400"><span class="font-bold">Speed: </span>{{ data.stats.speed }}</p>
-                <button href="#" class="inline-block max-w-fit items-center px-5 py-2 text-sm font-medium text-center text-white bg-blue-500 rounded-lg hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-3">
+                <button @click="addToTeam" class="inline-block max-w-fit items-center px-5 py-2 text-sm font-medium text-center text-white bg-blue-500 rounded-lg hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-3">
                     Add to team
                 </button>
             </div>
@@ -31,6 +31,12 @@
     
     const route = useRoute()
     const { data, pending } = useFetch(`https://pokebuildapi.fr/api/v1/pokemon/${route.params.name}`);
+
+    const team = useState('team', () => [])
+
+    function addToTeam() {
+        team.value.push(data.value)
+    }
     
 </script>
 
