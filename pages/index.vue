@@ -4,7 +4,7 @@
         <h1>Homepage</h1>
 
         <div class="wrapper">
-            <PokemonCard v-for="pokemon in pokemons" />
+            <PokemonCard v-for="pokemon in pokemons" :key="pokemon.id" :pokemon="pokemon" />
         </div>
     
     </div>
