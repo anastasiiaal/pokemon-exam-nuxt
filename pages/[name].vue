@@ -2,11 +2,11 @@
     <div class="container flex gap-8">
 
         <div href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row w-f  dark:border-gray-700 dark:bg-gray-800 mx-auto">
-            <img class="object-cover w-full rounded-t-lg h-[400px] w-[400px] md:rounded-none md:rounded-s-lg" :src="pokemon.image" :alt="pokemon.name">
+            <img class="object-cover w-full rounded-t-lg h-[400px] md:w-[400px] md:rounded-none md:rounded-s-lg" :src="pokemon.image" :alt="pokemon.name">
             <div class="flex flex-col justify-between p-4 leading-normal w-96">
                 <div class="flex items-center gap-2">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ pokemon.name }}</h5>
-                    <img v-for="type in pokemon.apiTypes" class="object-cover w-full rounded-t-lg h-8 w-8 md:rounded-none md:rounded-s-lg" :src="type.image" :alt="type.name">
+                    <img v-for="type in pokemon.apiTypes" class="object-cover rounded-t-lg h-8 w-8 md:rounded-none md:rounded-s-lg" :src="type.image" :alt="type.name">
                 </div>
                 <h6 class="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white underline">Statistics</h6>
                 <p class="mb-2 font-normal text-gray-700 dark:text-gray-400"><span class="font-bold">HP: </span>{{ pokemon.stats.HP }}</p>
