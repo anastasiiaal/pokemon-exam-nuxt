@@ -4,7 +4,7 @@
         <h1 class="text-xl font-bold text-center">Catalog</h1>
 
         <div class="flex flex-wrap justify-center gap-4 mt-5">
-            <button v-for="type in types" :key="type.id" class="px-4 py-2 bg-blue-200 cursor-pointer">
+            <button v-for="type in types" :key="type.id" class="px-4 py-2 bg-blue-200 cursor-pointer rounded-sm">
                 {{ type.name }}
             </button>
             
@@ -15,7 +15,6 @@
         </div>
     
     </div>
-    <pre>{{ types }}</pre>
 </template>
 
 <script setup>

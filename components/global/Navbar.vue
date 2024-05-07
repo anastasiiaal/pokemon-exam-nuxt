@@ -33,7 +33,7 @@
     }
 
     ul li a {
-        @apply w-[150px] text-center block border border-blue-500 rounded hover:border-gray-200 text-blue-500 hover:bg-gray-200 py-2 px-4
+        @apply w-[150px] text-center block border border-gray-200 rounded bg-white hover:border-gray-200 text-blue-500 hover:bg-gray-200 py-2 px-4
     }
 
     .router-link-exact-active {
