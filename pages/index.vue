@@ -1,7 +1,7 @@
 <template>
     <div class="container">
 
-        <h1>Homepage</h1>
+        <h1 class="text-xl font-bold text-center">Catalog</h1>
 
         <div class="wrapper">
             <PokemonCard v-for="pokemon in pokemons" :key="pokemon.id" :pokemon="pokemon" />

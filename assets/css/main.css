@@ -13,5 +13,5 @@ body {
 }
 
 .wrapper {
-    @apply flex flex-wrap gap-1 justify-between
+    @apply flex flex-wrap gap-1 justify-between my-12
 }

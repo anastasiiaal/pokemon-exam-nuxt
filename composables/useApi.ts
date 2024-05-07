@@ -8,10 +8,15 @@ export const useApi = () => {
         return response
     }
 
-    async function getOnePokemon(name: string) {
+    async function getPokemonByName(name: string) {
         const response = await $fetch(baseUrl + '/pokemon/' + name);
         return response
     }
 
-    return { getPokemons, getOnePokemon }
+    async function getCategories() {
+        const response = await $fetch(baseUrl + '/types/');
+        return response
+    }
+
+    return { getPokemons, getPokemonByName, getCategories }
 }
